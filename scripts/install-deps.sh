@@ -4,6 +4,9 @@ set -e
 
 printf "\n[-] Installing base OS dependencies...\n\n"
 
+# Update debian source
+printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+
 # install base dependencies
 
 apt-get update
